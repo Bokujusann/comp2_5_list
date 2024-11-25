@@ -28,9 +28,8 @@ void push_front(list* l, node* p)
 // pの次のノードを削除
 void remove_next(list* l, node* p)
 {
-	node* deleatingNode = p->pNext;
+	if (p->pNext == NULL)return;
 	p->pNext = p->pNext->pNext;
-	free(deleatingNode);
 }
 
 
